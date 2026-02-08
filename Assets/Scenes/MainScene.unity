@@ -35031,6 +35031,10 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1660426527}
+    - target: {fileID: 317666278638771382, guid: 7a48c00bf2ad5d64785bdfa87321a08b, type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 317666278638771383, guid: 7a48c00bf2ad5d64785bdfa87321a08b, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -35390,6 +35394,10 @@ PrefabInstance:
     - target: {fileID: 6213963799001954223, guid: 60f76fe3182faf745ab3ecffa7f9f6e4, type: 3}
       propertyPath: m_Depth
       value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6213963799001954223, guid: 60f76fe3182faf745ab3ecffa7f9f6e4, type: 3}
+      propertyPath: orthographic size
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
