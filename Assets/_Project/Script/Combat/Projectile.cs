@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    // vid collision så försvinner arrown
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject);

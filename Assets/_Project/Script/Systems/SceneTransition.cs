@@ -5,9 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransition : MonoBehaviour
 {
-    // Gör att han kan byta scen.
-    // Tex att gå in i gråttan och tillbaka till MainScene
-    // Här tänker jag att man kan lägga till fler kartbitar
     public string sceneToLoad;
     public Vector2 playerPosition;
     public VectorValue playerStorage;
