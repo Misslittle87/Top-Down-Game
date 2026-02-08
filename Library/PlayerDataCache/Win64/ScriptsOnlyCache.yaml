@@ -23,36 +23,27 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.IK.IKEditorManager
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    - Packages.Rider.Editor.UnitTesting.SyncTestRunEventsHandler
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - TestRunner.Callbacks.WindowResultUpdaterDataHolder
-    - UnityEditor.TestRunner.TestLaunchers.RemotePlayerLogController
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.CommandLineTest.RunData
-    - UnityEditor.TestTools.TestRunner.RerunCallbackData
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     - UnityEditor.TestTools.TestRunner.TestRunnerWindow
-    UnityEngine.TestRunner.dll:
-    - UnityEngine.TestRunner.Utils.TestRunCallbackListener
-    - UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
-    - UnityEngine.TestTools.TestRunner.Callbacks.PlayerQuitHandler
-    - UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
-    - UnityEngine.TestTools.TestRunner.PlaymodeTestsController
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -62,31 +53,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/InitTestScene637837154562713748.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 2370}
-    - Class: 114
-      Script: {instanceID: 3188}
-    - Class: 114
-      Script: {instanceID: 4054}
-    - Class: 114
-      Script: {instanceID: 4224}
-    - Class: 114
-      Script: {instanceID: 4412}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
     Assets/Scenes/Cave.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -153,7 +119,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6116}
     - Class: 114
-      Script: {instanceID: 28146}
+      Script: {instanceID: 17612}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1142,7 +1108,6 @@ ScriptsOnlyBuild:
     className: Projectile
   platform: 19
   scenePathNames:
-  - Assets/InitTestScene637837154562713748.unity
   - Assets/Scenes/MainScene.unity
   - Assets/Scenes/Cave.unity
-  playerPath: C:/Users/sofia/Zelda/Temp/UnityTempFile-c1a9c42d056174d458fd2c741b668850/PlayerWithTests/PlayerWithTests.exe
+  playerPath: C:/Users/sofia/Zelda/Zelda.exe

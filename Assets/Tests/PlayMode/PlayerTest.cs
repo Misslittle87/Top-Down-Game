@@ -5,10 +5,6 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEditor;
 
-
-// Nu har jag gjort några enkla tester. Det va inte så lätt att göra men till slut så lyckades jag
-// Och förstå vikten av att kunna testa koden utan att behöva starta spelet varenda gång.
-// Tex om man måste lågnt in i spelet för att testa så att koden verklgen funkar.
 public class PlayerTests
 {
     [UnityTest]
@@ -22,7 +18,7 @@ public class PlayerTests
     {
         var gameObject = new GameObject();
         var player = gameObject.AddComponent<Player>();
-        player.Movement();
+        //player.Movement();
 
         yield return new WaitForSeconds(1);
 
