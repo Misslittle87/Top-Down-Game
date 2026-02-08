@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    // Jag har inte hunnit ge en AI till mullvaden
-    // Men den ger skada till playern vid Collision
-    // Men jag kommer att forsätta utvekla detta spelet
     Rigidbody2D enemyBody;
     public Animator animator;
     public int health;
@@ -15,7 +12,6 @@ public class Enemy : MonoBehaviour
     public float moveSpeed;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         enemyBody = GetComponent<Rigidbody2D>();
@@ -29,7 +25,7 @@ public class Enemy : MonoBehaviour
         if (player != null)
         {
             Debug.Log("Player takes damage");
-            player.ChangeHealth(-1);
+            //player.ChangeHealth(-1);
         }
     }
 
