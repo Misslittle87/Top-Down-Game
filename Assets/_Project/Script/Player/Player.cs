@@ -2,17 +2,26 @@ using Assets._Project.Script.Characters;
 using Assets._Project.Script.Player;
 using UnityEngine;
 
-
-[RequireComponent(typeof(BaseMovement))]
-[RequireComponent(typeof(PlayerInput))]
-public class Player : MonoBehaviour
+namespace Assets._Project.Script.Player
 {
-    public BaseMovement Movement { get; private set; }
-    public PlayerInput PlayerInput { get; private set; }
-
-    private void Awake()
+    [RequireComponent(typeof(BaseMovement))]
+    [RequireComponent(typeof(PlayerInput))]
+    public class Player : MonoBehaviour
     {
-        Movement = GetComponent<BaseMovement>();
-        PlayerInput = GetComponent<PlayerInput>();
+        public BaseMovement Movement { get; private set; }
+        public PlayerInput PlayerInput { get; private set; }
+        public PlayerControls Controls { get; private set; }
+
+        private void Awake()
+        {
+            Movement = GetComponent<BaseMovement>();
+            PlayerInput = GetComponent<PlayerInput>();
+            Controls = new PlayerControls();
+        }
+
+        private void OnEnable() => Controls.Enable();
+
+        private void OnDisable() => Controls.Disable();
+
     }
 }
