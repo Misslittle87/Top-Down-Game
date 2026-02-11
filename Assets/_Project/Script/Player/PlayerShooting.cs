@@ -1,6 +1,7 @@
-using UnityEngine;
 using Assets._Project.Script.Characters;
 using Assets._Project.Script.Combat;
+using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 
@@ -12,43 +13,38 @@ namespace Assets._Project.Script.Player
         [SerializeField] private float arrowSpeed = 10f;
 
         private Vector2 lastLookDirection = Vector2.down;
-
-        private BaseMovement movement;
-        private PlayerControls controls;
+        private Player player;
 
         private void Awake()
         {
-            movement = GetComponent<BaseMovement>();
-            controls = new PlayerControls();
+            player = GetComponent<Player>();
         }
 
         private void OnEnable()
         {
-            controls.Enable();
+            player.Controls.GamePlay.Shoot.performed += OnShoot;
         }
 
         private void OnDisable()
         {
-            controls.Disable();
+            player.Controls.GamePlay.Shoot.performed -= OnShoot;
         }
 
         private void Update()
         {
-            if (movement.MoveDirection.sqrMagnitude > 0.001f)
-                lastLookDirection = movement.MoveDirection.normalized;
+            // Uppdatera vilken riktning vi tittar åt (baserat på movement)
+            Vector2 move = player.Movement.MoveDirection;
 
-            if (controls.GamePlay.Shoot.triggered)
-            {
-                Shoot(lastLookDirection);
-            }
+            if (move.sqrMagnitude > 0.001f)
+                lastLookDirection = move.normalized;
         }
 
-        private void Shoot(Vector2 direction)
+        private void OnShoot(InputAction.CallbackContext context)
         {
             GameObject arrow = Instantiate(arrowPrefab, transform.position, Quaternion.identity);
 
             Projectile projectile = arrow.GetComponent<Projectile>();
-            projectile.Launch(direction, arrowSpeed);
+            projectile.Launch(lastLookDirection, arrowSpeed);
         }
     }
 }
