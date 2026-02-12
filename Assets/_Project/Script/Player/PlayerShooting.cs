@@ -3,8 +3,6 @@ using Assets._Project.Script.Combat;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-
-
 namespace Assets._Project.Script.Player
 {
     public class PlayerShooting : MonoBehaviour
@@ -32,7 +30,6 @@ namespace Assets._Project.Script.Player
 
         private void Update()
         {
-            // Uppdatera vilken riktning vi tittar åt (baserat på movement)
             Vector2 move = player.Movement.MoveDirection;
 
             if (move.sqrMagnitude > 0.001f)
